@@ -23,3 +23,4 @@ C:\Users\nihilistblues\Documents\ASPNET\GameStore\obj\Debug\net8.0\refint\GameSt
 C:\Users\nihilistblues\Documents\ASPNET\GameStore\obj\Debug\net8.0\GameStore.pdb
 C:\Users\nihilistblues\Documents\ASPNET\GameStore\obj\Debug\net8.0\GameStore.genruntimeconfig.cache
 C:\Users\nihilistblues\Documents\ASPNET\GameStore\obj\Debug\net8.0\ref\GameStore.dll
+C:\Users\nihilistblues\Documents\ASPNET\gamestore\obj\Debug\net8.0\GameStore.sourcelink.json
