@@ -3,6 +3,8 @@ using GameStore;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
+const string GetGameEndpointName = "GetGame";
+
 List<GameDTO> games = [
     new(
         1,
@@ -44,7 +46,7 @@ List<GameDTO> games = [
 
 app.MapGet("/games", () => games);
 
-app.MapGet("/games/{id}", (int id) => games.Find(game => game.Id == id)).WithName("GetGame");
+app.MapGet("/games/{id}", (int id) => games.Find(game => game.Id == id)).WithName(GetGameEndpointName);
 
 app.MapPost("/games", (CreateGameDTO newGame) =>
 {
@@ -57,7 +59,7 @@ app.MapPost("/games", (CreateGameDTO newGame) =>
     );
 
     games.Add(game);
-    return Results.CreatedAtRoute("GetGame", new { id = game.Id }, game);
+    return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, game);
 });
 
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nihilistblues\\Documents\\ASPNET\\GameStore\\GameStore.csproj": {}
+    "C:\\Users\\nihilistblues\\Documents\\ASPNET\\gamestore\\GameStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nihilistblues\\Documents\\ASPNET\\GameStore\\GameStore.csproj": {
+    "C:\\Users\\nihilistblues\\Documents\\ASPNET\\gamestore\\GameStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nihilistblues\\Documents\\ASPNET\\GameStore\\GameStore.csproj",
+        "projectUniqueName": "C:\\Users\\nihilistblues\\Documents\\ASPNET\\gamestore\\GameStore.csproj",
         "projectName": "GameStore",
-        "projectPath": "C:\\Users\\nihilistblues\\Documents\\ASPNET\\GameStore\\GameStore.csproj",
+        "projectPath": "C:\\Users\\nihilistblues\\Documents\\ASPNET\\gamestore\\GameStore.csproj",
         "packagesPath": "C:\\Users\\nihilistblues\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nihilistblues\\Documents\\ASPNET\\GameStore\\obj\\",
+        "outputPath": "C:\\Users\\nihilistblues\\Documents\\ASPNET\\gamestore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
