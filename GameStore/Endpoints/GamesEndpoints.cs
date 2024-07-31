@@ -1,4 +1,6 @@
-﻿namespace GameStore;
+﻿using GameStore.DTO;
+
+namespace GameStore.Endpoints;
 
 
 public static class GamesEndpoints
@@ -44,18 +46,20 @@ public static class GamesEndpoints
 
     ];
 
-    public static WebApplication MapGamesEndpoints(this WebApplication app)
+    public static RouteGroupBuilder MapGamesEndpoints(this WebApplication app)
     {
-        app.MapGet("/games", () => games);
+        var group = app.MapGroup("games").WithParameterValidation();
 
-        app.MapGet("/games/{id}", (int id) =>
+        group.MapGet("/", () => games);
+
+        group.MapGet("/{id}", (int id) =>
         {
             GameDTO? game = games.Find(game => game.Id == id);
             return game is null ? Results.NotFound() : Results.Ok(game);
 
         }).WithName(GetGameEndpointName);
 
-        app.MapPost("/games", (CreateGameDTO newGame) =>
+        group.MapPost("/", (CreateGameDTO newGame) =>
         {
             GameDTO game = new(
               games.Count + 1,
@@ -69,7 +73,7 @@ public static class GamesEndpoints
             return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, game);
         });
 
-        app.MapPut("games/{id}", (int id, UpdateGameDTO updateGameDTO) =>
+        group.MapPut("/{id}", (int id, UpdateGameDTO updateGameDTO) =>
         {
             var index = games.FindIndex(game => game.Id == id);
             if (index == -1) return Results.NotFound();
@@ -85,13 +89,13 @@ public static class GamesEndpoints
             return Results.NoContent();
         });
 
-        app.MapDelete("games/{id}", (int id) =>
+        group.MapDelete("/{id}", (int id) =>
         {
             games.RemoveAll(game => game.Id == id);
             return Results.NoContent();
         });
 
-        return app;
+        return group;
 
     }
 }

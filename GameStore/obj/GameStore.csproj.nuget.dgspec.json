@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nihilistblues\\Documents\\ASPNET\\gamestore\\GameStore.csproj": {}
+    "C:\\Users\\nihilistblues\\Documents\\ASPNET\\GameStore\\GameStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nihilistblues\\Documents\\ASPNET\\gamestore\\GameStore.csproj": {
+    "C:\\Users\\nihilistblues\\Documents\\ASPNET\\GameStore\\GameStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nihilistblues\\Documents\\ASPNET\\gamestore\\GameStore.csproj",
+        "projectUniqueName": "C:\\Users\\nihilistblues\\Documents\\ASPNET\\GameStore\\GameStore.csproj",
         "projectName": "GameStore",
-        "projectPath": "C:\\Users\\nihilistblues\\Documents\\ASPNET\\gamestore\\GameStore.csproj",
+        "projectPath": "C:\\Users\\nihilistblues\\Documents\\ASPNET\\GameStore\\GameStore.csproj",
         "packagesPath": "C:\\Users\\nihilistblues\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nihilistblues\\Documents\\ASPNET\\gamestore\\obj\\",
+        "outputPath": "C:\\Users\\nihilistblues\\Documents\\ASPNET\\GameStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "MinimalApis.Extensions": {
+              "target": "Package",
+              "version": "[0.11.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

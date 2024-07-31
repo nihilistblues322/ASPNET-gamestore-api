@@ -1,4 +1,4 @@
-﻿namespace GameStore;
+﻿namespace GameStore.DTO;
 
 public record class GameDTO(
     int Id,
