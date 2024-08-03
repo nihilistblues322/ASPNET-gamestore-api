@@ -27,7 +27,6 @@ public static class GamesEndpoints
 
         }).WithName(GetGameEndpointName);
 
-
         group.MapPost("/", async (CreateGameDTO newGame, GameStoreContext db) =>
         {
             Game game = newGame.ToEntity();
@@ -36,7 +35,6 @@ public static class GamesEndpoints
             return Results.CreatedAtRoute(
                 GetGameEndpointName, new { id = game.Id }, game.ToGameDetailsDto());
         });
-
 
         group.MapPut("/{id}", async (int id, UpdateGameDTO updateGameDTO, GameStoreContext db) =>
         {
@@ -50,7 +48,6 @@ public static class GamesEndpoints
             await db.SaveChangesAsync();
             return Results.NoContent();
         });
-
 
         group.MapDelete("/{id}", async (int id, GameStoreContext db) =>
         {
