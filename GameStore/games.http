@@ -9,7 +9,7 @@ POST http://localhost:5142/games
 Content-Type: application/json
 
 {
-    "name": "Street",
+    "name": "Street Fighter",
     "genreId": 1,
     "price": 29.99,
     "releaseDate": "2001-11-18"
